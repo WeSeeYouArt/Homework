@@ -47,3 +47,4 @@ console.log(`A fost adaugat un nou vaccin in lista: ${datePersonaleObiect.vaccin
 console.log(`${datePersonaleObiect.nume} a primit recent inca un vaccin: ${datePersonaleObiect.vaccinuri.push}.`);
 datePersonaleObiect.vaccinuri.unshift({numeVaccin: 'Hepatita canina a fost primit', data: '14.07.2022.'});
 datePersonaleObiect.afiseazaIstoricVaccinare();
+
