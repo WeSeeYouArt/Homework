@@ -139,11 +139,11 @@ VehiculElectricPrototip.descriere = function() {
 }
 
 VehiculElectricPrototip.descarcare = function() {
-    console.log(`${this.model} de culoare ${this.culoare}, fabricat in anul ${this.anFabricatie}, are viteza de ${this.viteza}km/h, bateria e de ${this.baterie}%, iar dupa descarcare, bateria are ${this.baterie - 5}%.`);
+    console.log(`${this.model} are viteza de ${this.viteza}km/h, iar dupa accelerare viteza e ${(this.viteza + 10)}km/h si bateria are ${this.baterie - 5}%.`);
 }
 
 VehiculElectricPrototip.incarcare = function() {
-    console.log(`${this.model} de culoare ${this.culoare}, fabricat in anul ${this.anFabricatie}, are viteza de ${this.viteza}km/h, bateria e de ${this.baterie}%, iar dupa incarcare, bateria are ${this.baterie + 10}%.`);
+    console.log(`${this.model} are viteza de ${this.viteza}km/h, iar dupa franare viteza e ${(this.viteza - 10)}km/h si bateria are ${this.baterie + 10}%.`);
 }
 
 const masina1 = Object.create(MasinaPrototip);
