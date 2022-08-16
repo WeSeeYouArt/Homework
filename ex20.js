@@ -27,15 +27,15 @@
 // VehiculElectric.prototype = Object.create(Masina.prototype);
 
 // VehiculElectric.prototype.descriere = function() {
-//     console.log(`${this.model} de culoare ${this.culoare}, fabricat in anul ${this.anFabricatie}, are viteza de ${this.viteza}km/h si bateria e ${this.baterie}%.`);
+//     console.log(`${this.model} de culoare ${this.culoare}, fabricat in anul ${this.anFabricatie}, are viteza de ${this.viteza}km/h si bateria are ${this.baterie}%.`);
 // }
 
 // VehiculElectric.prototype.descarcare = function() {
-//     console.log(`${this.model} are viteza de ${this.viteza}km/h, iar dupa accelerare viteza e ${(this.viteza + 10)}km/h si bateria e ${this.baterie - 5}%.`);
+//     console.log(`${this.model} are viteza de ${this.viteza}km/h, iar dupa accelerare viteza e ${(this.viteza + 10)}km/h si bateria are ${this.baterie - 5}%.`);
 // }
 
 // VehiculElectric.prototype.incarcare = function() {
-//     console.log(`${this.model} are viteza de ${this.viteza}km/h, iar dupa franare viteza e ${(this.viteza - 10)}km/h si bateria e ${this.baterie + 10}%.`);
+//     console.log(`${this.model} are viteza de ${this.viteza}km/h, iar dupa franare viteza e ${(this.viteza - 10)}km/h si bateria are ${this.baterie + 10}%.`);
 // }
 
 // const masina1 = new Masina('Ford Focus', 'rosie', 2018, 120);
@@ -81,15 +81,15 @@
 //     }
 
 //     descriere() {
-//         console.log(`${this.model} de culoare ${this.culoare}, fabricat in anul ${this.anFabricatie}, are viteza de ${this.viteza}km/h si ${this.baterie}%.`);
+//         console.log(`${this.model} de culoare ${this.culoare}, fabricat in anul ${this.anFabricatie}, are viteza de ${this.viteza}km/h si bateria are ${this.baterie}%.`);
 //     }
 
 //     descarcare() {
-//         console.log(`${this.model} are viteza de ${this.viteza}km/h, iar dupa accelerare viteza e ${(this.viteza + 10)}km/h si bateria e ${this.baterie - 5}%.`);
+//         console.log(`${this.model} are viteza de ${this.viteza}km/h, iar dupa accelerare viteza e ${(this.viteza + 10)}km/h si bateria are ${this.baterie - 5}%.`);
 //     }
 
 //     incarcare() {
-//         console.log(`${this.model} are viteza de ${this.viteza}km/h, iar dupa franare viteza e ${(this.viteza - 10)}km/h si bateria e ${this.baterie + 10}%.`);
+//         console.log(`${this.model} are viteza de ${this.viteza}km/h, iar dupa franare viteza e ${(this.viteza - 10)}km/h si bateria are ${this.baterie + 10}%.`);
 //     }
 // }
 
@@ -134,6 +134,18 @@ VehiculElectricPrototip.init = function(model, culoare, anFabricatie, viteza, ba
     this.baterie = baterie;
 }
 
+VehiculElectricPrototip.descriere = function() {
+    console.log(`${this.model} de culoare ${this.culoare}, fabricat in anul ${this.anFabricatie}, are viteza de ${this.viteza}km/h si bateria are ${this.baterie}%.`);
+}
+
+VehiculElectricPrototip.descarcare = function() {
+    console.log(`${this.model} de culoare ${this.culoare}, fabricat in anul ${this.anFabricatie}, are viteza de ${this.viteza}km/h, bateria e de ${this.baterie}%, iar dupa descarcare, bateria are ${this.baterie - 5}%.`);
+}
+
+VehiculElectricPrototip.incarcare = function() {
+    console.log(`${this.model} de culoare ${this.culoare}, fabricat in anul ${this.anFabricatie}, are viteza de ${this.viteza}km/h, bateria e de ${this.baterie}%, iar dupa incarcare, bateria are ${this.baterie + 10}%.`);
+}
+
 const masina1 = Object.create(MasinaPrototip);
 masina1.init('Ford Focus', 'rosie', 2018, 120)
 const masina2 = Object.create(VehiculElectricPrototip);
@@ -142,6 +154,6 @@ console.log(masina1, masina2);
 masina1.descriere();
 masina1.accelerare();
 masina1.franare();
-// masina2.descriere(); functia nu e apelata corect
-// masina2.descarcare(); functia nu e creata
-// masina2.incarcare(); functia nu e creata
+masina2.descriere();
+masina2.descarcare();
+masina2.incarcare();
