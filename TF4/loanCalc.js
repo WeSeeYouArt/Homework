@@ -1,4 +1,4 @@
-document.querySelector('.calculateLoan')?.addEventListener('click', function () {
+document.querySelector('.calculateLoan').addEventListener('click', function () {
     const loanAmount = document.querySelector('.loanAmount').value;
     const periodPay = document.querySelector('.periodPay').value;
     const interestRate = document.querySelector('.interestRate').value;

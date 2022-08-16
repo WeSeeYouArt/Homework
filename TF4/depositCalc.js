@@ -1,4 +1,4 @@
-document.querySelector('.calculateInterest')?.addEventListener('click', function () {
+document.querySelector('.calculateInterest').addEventListener('click', function () {
     const depositAmount = document.querySelector('.depositAmount').value;
     const depositPeriod = document.querySelector('.depositPeriod').value;
     const depositInterest = document.querySelector('.depositInterest').value; 
