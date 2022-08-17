@@ -120,6 +120,7 @@ const MasinaPrototip = {
 
     accelerare() {
         console.log(`${this.model} are viteza de ${this.viteza}km/h, iar dupa accelerare viteza e ${(this.viteza + 10)}km/h.`);
+        this.viteza += 10;
     },
 
     franare() {
@@ -140,6 +141,7 @@ VehiculElectricPrototip.descriere = function() {
 
 VehiculElectricPrototip.descarcare = function() {
     console.log(`${this.model} are viteza de ${this.viteza}km/h, iar dupa accelerare viteza e ${(this.viteza + 10)}km/h si bateria are ${this.baterie - 5}%.`);
+    this.baterie -= 5;
 }
 
 VehiculElectricPrototip.incarcare = function() {
