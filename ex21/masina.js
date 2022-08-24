@@ -3,6 +3,9 @@ class Masina {
         this.model = model;
         this.viteza = viteza;
     }
+    descriere() {
+        document.querySelector('.rezultat').textContent = (`Masina e ${this.model} si are viteza de ${this.viteza} km/h.`);
+    }
     accelerare() {
         this.viteza += 10;
     }
@@ -16,19 +19,19 @@ document.querySelector('.mesaj').addEventListener('click', function() {
     const viteza = parseInt(document.querySelector('.vitezaMasina').value);
 
     masina = new Masina(model, viteza);
-    document.querySelector('.rezultat').textContent = (`Masina e ${model} si are viteza de ${viteza} km/h.`);
+    masina.descriere();
 });
 
 document.querySelector('.accelerare').addEventListener('click', function() {
     if(masina) {
         masina.accelerare();
-        document.querySelector('.rezultat').textContent = (`Masina e ${masina.model} si are viteza de ${masina.viteza} km/h.`);
+        masina.descriere();
     }
 });
 
 document.querySelector('.franare').addEventListener('click', function() {
     if(masina) {
         masina.franare();
-        document.querySelector('.rezultat').textContent = (`Masina e ${masina.model} si are viteza de ${masina.viteza} km/h.`);
+        masina.descriere();
     }
 });
