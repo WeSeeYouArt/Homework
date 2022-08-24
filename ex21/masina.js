@@ -11,8 +11,6 @@ class Masina {
     }
 }
 
-let masina;
-
 document.querySelector('.mesaj').addEventListener('click', function() {
     const model = document.querySelector('.marcaMasina').value;
     const viteza = parseInt(document.querySelector('.vitezaMasina').value);
