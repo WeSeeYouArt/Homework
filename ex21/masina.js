@@ -13,8 +13,7 @@ class Masina {
     franare() {
         if (this.viteza - 10 < 0) {
             this.viteza = 0;
-        }
-        else {
+        } else {
             this.viteza -= 10;
         }
     }
