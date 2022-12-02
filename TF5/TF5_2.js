@@ -96,10 +96,10 @@ class Robot {
         return {xCurent: this.xCurent, yCurent: this.yCurent, orientare: this.orientare};
     }
   }
-  
-  const robot1 = new Robot(1, 2, 'N', 5, 5);
-  robot1.do('LMLMLMLMM');
-  const robot2 = new Robot(1, 5, 'N', 5, 5);
-  robot2.do('LMMRMLMRM');
-  const robot3 = new Robot(0, 0, 'N', 5, 5);
-  robot3.do('MRMMLMM');
+
+const robot1 = new Robot(1, 2, 'N', 5, 5);
+robot1.do('LMLMLMLMM');
+const robot2 = new Robot(1, 5, 'N', 5, 5);
+robot2.do('LMMRMLMRM');
+const robot3 = new Robot(0, 0, 'N', 5, 5);
+robot3.do('MRMMLMM');
