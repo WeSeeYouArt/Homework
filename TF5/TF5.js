@@ -1,40 +1,40 @@
-let x = 1;
-let y = 2;
-let p = 'N';
+let a = 1;
+let b = 2;
+let c = 'N';
 
 function right() {
-    if (p == 'N') {
-        p = 'E';
-    } else if (p == 'E'){
-        p = 'S';
-    } else if (p == 'S') {
-        p = 'W';
+    if (c == 'N') {
+        c = 'E';
+    } else if (c == 'E'){
+        c = 'S';
+    } else if (c == 'S') {
+        c = 'W';
     } else {
-        p = 'N';
+        c = 'N';
     }
 }
 
 function left() {
-    if (p == 'N'){
-        p = 'W';
-    } else if (p == 'W') {
-        p = 'S';
-    } else if (p == 'S') {
-        p = 'E';
+    if (c == 'N'){
+        c = 'W';
+    } else if (c == 'W') {
+        c = 'S';
+    } else if (c == 'S') {
+        c = 'E';
     } else {
-        p = 'N';
+        c = 'N';
     }
 }
 
 function move() {
-    if (p == 'N') {
-        y = y + 1;
-    } else if (p == 'S') {
-        y = y - 1;
-    } else if (p == 'E') {
-        x = x + 1;
+    if (c == 'N') {
+        b = b + 1;
+    } else if (c == 'S') {
+        b = b - 1;
+    } else if (c == 'E') {
+        a = a + 1;
     } else {
-        x = x - 1;
+        a = a - 1;
     }
 }
 
@@ -49,4 +49,4 @@ for (let i=0; i< apel.length; i++) {
         move()
     }
 }
-console.log (x,y,p);
+console.log (a,b,c);
